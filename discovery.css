@@ -1,0 +1,119 @@
+/* Useful routes and a working example, in Infant Nook's editorial language. */
+.discovery-entry { padding-block: 43px 8px; }
+.discovery-entry h2 { font-size: clamp(22px, 2.5vw, 30px); letter-spacing: -.035em; }
+.discovery-routes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 23px; gap: 26px; }
+.discovery-route { display: flex; align-items: center; gap: 14px; min-width: 0; padding-block: 18px; border-block: 1px solid var(--editorial-line); }
+.route-number { color: var(--editorial-green); font-size: 10px; align-self: flex-start; padding-top: 5px; }
+.discovery-route strong { display: block; font-size: 16px; letter-spacing: -.025em; }
+.discovery-route strong + span { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
+.route-arrow { margin-left: auto; font-size: 24px; color: var(--editorial-green); transition: transform .2s; }
+.discovery-route:hover .route-arrow { transform: translate(2px, -2px); }
+.discovery-route:hover strong { text-decoration: underline; text-underline-offset: 4px; }
+.planner-discovery { display: grid; grid-template-columns: .85fr 1.15fr; align-items: start; gap: clamp(32px, 5vw, 76px); }
+.planner-discovery-copy { padding-top: 28px; }
+.planner-discovery-copy h2 { font-size: clamp(34px, 3.6vw, 47px); line-height: 1.16; }
+.planner-discovery-copy > p:not(.eyebrow) { color: var(--muted); font-size: 15px; line-height: 1.85; margin-top: 23px; max-width: 410px; }
+.planner-discovery-copy > .planner-example-invitation { padding-left: 17px; border-left: 2px solid #b9d1bd; }
+.planner-discovery-copy > .button { margin-top: 29px; }
+.planner-discovery-copy > .planner-demo-note { font-size: 12px; margin-top: 14px; max-width: 330px; }
+.planner-sample-link { display: inline-flex; align-items: center; gap: 15px; margin-top: 25px; border-bottom: 1px solid #aebfb1; padding-bottom: 5px; font-size: 13px; font-weight: 800; }
+.planner-sample-link:hover { color: var(--editorial-green); }
+.planner-example { padding: 27px; border: 1px solid var(--editorial-line); border-radius: 24px; background: #f0f2e9; min-width: 0; }
+.example-label { display: flex; align-items: center; gap: 8px; font-size: 9px; font-weight: 800; letter-spacing: .13em; margin-bottom: 20px; }
+.example-label > span { width: 6px; height: 6px; background: var(--editorial-green); border-radius: 50%; }
+.example-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin-bottom: 23px; }
+.example-steps a { display: flex; flex-direction: column; gap: 9px; min-height: 79px; font-size: 12px; line-height: 1.4; font-weight: 800; padding: 12px 11px; border-radius: 9px; border: 1px solid #d5ddcf; }
+.example-steps a > span { font-size: 10px; color: var(--editorial-green); font-weight: 400; }
+.example-steps a:hover { background: #e1e9dd; }
+.example-steps a[aria-selected="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+.example-steps a[aria-selected="true"] > span { color: #cae7d2; }
+.example-panel { background: var(--paper); border: 1px solid #e0e4d9; border-radius: 14px; padding: 24px; scroll-margin-top: 120px; }
+.example-panel + .example-panel { margin-top: 20px; }
+.discovery-ready .example-panel + .example-panel { margin-top: 0; }
+.discovery-ready .example-panel { min-height: 420px; }
+.example-panel h3 { font-size: 26px; letter-spacing: -.035em; }
+.example-overline { font-size: 9px; font-weight: 800; letter-spacing: .08em; margin-bottom: 10px; text-transform: uppercase; }
+#example-idea { padding: 0; overflow: hidden; }
+.example-dish-photo { width: 100%; height: 230px; object-fit: cover; object-position: 50% 59%; }
+.example-idea-caption { padding: 22px 24px; }
+.example-idea-caption p:not(.example-overline) { color: var(--muted); font-size: 13px; margin-top: 7px; }
+.example-next { align-items: center; justify-content: space-between; gap: 14px; min-height: 44px; padding: 9px 0; margin-top: 17px; background: transparent; border-bottom: 1px solid #afc1b3; font-size: 13px; font-weight: 800; }
+.example-next > span { font-size: 22px; }
+.example-next:hover { color: var(--editorial-green); }
+.example-day-choice { flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-top: 25px; }
+.example-day-choice label { font-size: 12px; color: var(--muted); }
+.example-day-choice select { font: inherit; font-size: 13px; color: var(--ink); border: 1px solid #b9c8bb; border-radius: 7px; background: var(--cream); min-height: 44px; padding: 7px 27px 7px 12px; max-width: 100%; }
+.example-day-choice select:focus-visible { outline: 3px solid #15736a; outline-offset: 4px; }
+.example-week-strip { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 5px; margin-block: 23px; }
+.example-week-strip > span { display: grid; justify-items: center; gap: 11px; padding: 12px 2px; border: 1px solid var(--line); border-radius: 8px; font-size: 11px; color: var(--muted); }
+.example-week-strip > .is-selected { background: #dfece2; border-color: #8aac94; color: var(--ink); font-weight: 800; }
+.example-week-strip i { width: 5px; height: 5px; border-radius: 50%; background: #dce2d7; }
+.example-week-strip .is-selected i { background: var(--editorial-green); }
+.example-menu-slot { display: flex; align-items: center; gap: 14px; background: var(--peach); padding: 13px; border-radius: 10px; }
+.example-menu-slot img { width: 76px; height: 78px; flex-shrink: 0; object-fit: cover; border-radius: 7px; }
+.example-menu-slot .example-overline { margin-bottom: 5px; font-size: 8px; }
+.example-menu-slot strong { font-size: 18px; letter-spacing: -.025em; }
+.example-menu-slot p:last-child { font-size: 11px; margin-top: 4px; }
+.example-shopping-origin { color: var(--muted); font-size: 12px; margin-top: 12px; line-height: 1.7; }
+.example-shopping-list { list-style: none; padding: 0; margin: 16px 0 0; }
+.example-shopping-list li + li { border-top: 1px solid var(--line); }
+.example-shopping-list label { display: flex; align-items: center; gap: 12px; padding-block: 12px; min-height: 54px; cursor: pointer; }
+.example-shopping-list input { flex-shrink: 0; accent-color: var(--editorial-green); width: 19px; height: 19px; margin: 0; }
+.example-shopping-list strong { display: block; font-size: 13px; font-weight: 400; line-height: 1.45; }
+.example-shopping-list strong + span { color: var(--muted); display: block; font-size: 10px; margin-top: 4px; }
+.example-shopping-list input:checked + span strong { text-decoration: line-through; color: var(--muted); }
+.example-shopping-list input:checked + span > span { color: #376c56; font-weight: 800; }
+.example-shopping-count { font-size: 11px; color: var(--editorial-green); margin-top: 14px; font-weight: 800; }
+.example-footnote { color: var(--muted); font-size: 10px; line-height: 1.8; margin-top: 17px; }
+.discovery-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+[data-discovery-action] { display: none; }
+.discovery-ready [data-discovery-action] { display: inline-flex; }
+.discovery-ready .example-day-choice { display: flex; }
+@media (min-width: 901px) and (max-width: 1249px) {
+  .main-nav .nav-recipes { display: none; }
+}
+@media (max-width: 1050px) {
+  .discovery-routes { gap: 18px; }
+  .discovery-route { gap: 10px; }
+  .discovery-route strong { font-size: 14px; }
+  .route-number { display: none; }
+  .planner-discovery { gap: 30px; grid-template-columns: .85fr 1.15fr; }
+  .planner-example { padding: 20px; }
+  .planner-discovery-copy h2 { font-size: 35px; }
+}
+@media (max-width: 800px) {
+  .planner-discovery { grid-template-columns: 1fr; gap: 32px; }
+  .planner-discovery-copy { padding-top: 0; }
+  .planner-discovery-copy > p:not(.eyebrow) { max-width: 520px; }
+  .planner-discovery-copy > .planner-demo-note { max-width: 360px; }
+  .planner-example { max-width: 620px; width: 100%; }
+}
+@media (max-width: 650px) {
+  .discovery-entry { padding-block: 30px 0; }
+  .discovery-routes { grid-template-columns: 1fr; gap: 0; margin-top: 20px; }
+  .discovery-route { padding-block: 16px; gap: 14px; border-top: 0; }
+  .discovery-route:first-child { border-top: 1px solid var(--editorial-line); }
+  .route-number { display: block; }
+  .discovery-route strong { font-size: 16px; }
+  .discovery-route strong + span { font-size: 12px; }
+  .planner-discovery-copy h2 { font-size: clamp(32px, 8vw, 40px); }
+  .planner-discovery-copy > p:not(.eyebrow) { font-size: 14px; }
+  .planner-discovery-copy > .planner-demo-note { font-size: 12px; }
+  .planner-example { padding: 19px 15px; border-radius: 18px; }
+  .example-steps { gap: 5px; }
+  .example-steps a { padding: 10px 8px; font-size: 11px; min-height: 88px; }
+  .example-panel { padding: 19px; }
+  .discovery-ready .example-panel { min-height: 415px; }
+  .example-panel h3 { font-size: 24px; }
+  .example-dish-photo { height: 228px; }
+  .example-idea-caption { padding: 20px; }
+  .example-week-strip { gap: 4px; }
+  .example-week-strip > span { font-size: 10px; }
+  .example-menu-slot { padding: 10px; gap: 11px; }
+  .example-menu-slot img { width: 56px; height: 65px; }
+  .example-menu-slot strong { font-size: 17px; }
+  .example-shopping-list strong { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .discovery-route:hover .route-arrow { transform: none; }
+}
