@@ -1,0 +1,6 @@
+.git/
+_sistema/
+README.md
+assets/PROVENANCE.md
+assets/provenance.json
+node_modules/
