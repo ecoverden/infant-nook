@@ -1,8 +1,8 @@
-# Infant Nook — Landing v2
+# Infant Nook — Landing v3
 
 Web: https://www.infantnook.com/ · App independiente: https://app.infantnook.com/
 
-Rediseño del 4 de septiembre de 2026: identidad cálida Infant Nook, ilustración canónica Baby Sign, catálogo de seis libros filtrable, selector de guías, menú móvil, preguntas frecuentes y suscripción oficial a Nookies.
+Rediseño del 4 de septiembre de 2026: fotografía editorial ilustrativa creada con IA, portada interactiva, capítulos visuales sincronizados con el scroll, catálogo de seis libros filtrable, selector de guías y suscripción oficial a Nookies. La paleta, la voz editorial y las portadas originales mantienen la identidad Infant Nook.
 
 ## Desarrollo
 
@@ -22,12 +22,18 @@ Comprueba sintaxis JS, IDs/anchors, catálogo y recursos, y genera `dist/`. La c
 
 - `index.html`: contenido HTML disponible sin ejecutar JavaScript.
 - `styles.css`: tokens, diseño responsive, estados y movimiento reducido.
+- `editorial.css`: dirección visual, fotografía, capítulos y adaptación a pantallas pequeñas.
+- `visual.js`: escenas de hero, scroll por capítulos, progreso y parallax de puntero. Sin autoplay; las imágenes se leen en secuencia sin JS, con movimiento reducido o en ventanas pequeñas.
 - `app.js`: navegación, filtros y selector accesible con `<dialog>`.
 - `newsletter.js`: una única instancia oficial ActiveCampaign (formulario 5), carga diferida, etiquetas y validación; fallback al formulario alojado.
 - `assets/PROVENANCE.md`: originales y derivados optimizados, excluido de despliegue.
 - `scripts/build.mjs`: paquete público reproducible.
 
 Se ha mantenido la arquitectura estática: interacciones progresivas, imágenes WebP y fuentes locales, sin framework o librerías de animación.
+
+## Imágenes editoriales
+
+Las tres fotografías `assets/editorial-*-v3.webp` son escenas ficticias creadas con IA y así se indica en la web. No representan clientes, testimonios, a Amelia Benet ni demostraciones sanitarias. Derivados WebP de 1440 × 960 px. Los originales y el conjunto exacto de prompts se conservan localmente en `_sistema/visual-v3/`, excluidos de publicación.
 
 ## Newsletter: contrato existente
 
@@ -46,7 +52,7 @@ El canon de Amelia es `amelia-benet-personal-brand-v2.md`: voz editorial/seudón
 
 Proyecto Vercel existente `infant-nook`, equipo `eco-verdens-projects`; configuración de build en `vercel.json`. La rama `main` del repositorio `ecoverden/infant-nook` es la fuente remota. Publicar únicamente dentro de una petición autorizada de actualización de la web.
 
-Antes de asignar dominios: compilar, revisar UI, crear deployment sin asignar dominio, verificar HTML/recursos y después promover. No desactivar protección de deployments. El deployment de producción anterior al rediseño es `dpl_BjS9ysHsLPcBjgF1Yeqp4k1Pt3W3` (`infant-nook-n8ebig67w-eco-verdens-projects.vercel.app`); conservarlo para rollback.
+Antes de asignar dominios: compilar, revisar UI, crear deployment sin asignar dominio, verificar HTML/recursos y después promover. No desactivar protección de deployments. El deployment anterior a v3 es `dpl_GiFWzfFiNKM6wG59cTiYck2gncEt` (`infant-nook-5okc4pg9a-eco-verdens-projects.vercel.app`); conservarlo para rollback.
 
 ## Pendiente heredado
 

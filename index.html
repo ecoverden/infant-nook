@@ -24,15 +24,15 @@
     <meta property="og:url" content="https://www.infantnook.com/" />
     <meta
       property="og:image"
-      content="https://www.infantnook.com/assets/familia.webp"
+      content="https://www.infantnook.com/assets/editorial-conexion-v3.webp"
     />
-    <meta property="og:image:width" content="900" />
-    <meta property="og:image:height" content="900" />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="960" />
     <meta
       property="og:image:alt"
-      content="Una familia comparte la mesa con su bebé. Ilustración de Infant Nook."
+      content="Un bebé y una persona adulta comparten una mirada. Escena ilustrativa creada con IA."
     />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/webp" href="/assets/logo.webp" />
     <link
       rel="preload"
@@ -42,7 +42,9 @@
       crossorigin
     />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/editorial.css" />
     <script src="/app.js" defer></script>
+    <script src="/visual.js" defer></script>
     <script src="/newsletter.js" defer></script>
     <noscript
       ><style>
@@ -101,158 +103,83 @@
       </div>
     </header>
     <main id="contenido">
-      <section class="hero wrap" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="tiny-sun" aria-hidden="true">✳</span> UN RINCÓN PARA
-            CRECER EN FAMILIA
-          </p>
-          <h1 id="hero-title">
-            Crecer juntos,<br />un <span class="underlined">pequeño</span
-            ><br />paso a la vez<span class="coral-dot">.</span>
-          </h1>
-          <p class="hero-description">
-            La crianza trae muchas preguntas. Te acompañamos con guías de
-            alimentación, sueño y comunicación, con evidencia, cariño y los pies
-            en la vida real.
-          </p>
-          <div class="hero-actions">
-            <a class="button" href="#libros"
-              >Descubre los libros <span aria-hidden="true">↗</span></a
-            ><button class="text-button finder-trigger" type="button">
-              Encuentra tu guía <span aria-hidden="true">→</span>
-            </button>
+      <section class="hero-editorial" aria-labelledby="hero-title">
+        <div class="hero-editorial-layout wrap">
+          <div class="hero-editorial-copy">
+            <p class="eyebrow"><span class="editorial-dot" aria-hidden="true"></span> INFANT NOOK · CRIAR Y CRECER</p>
+            <h1 id="hero-title">Su mundo<br /> empieza<br /> <span>contigo.</span></h1>
+            <p class="hero-kicker">Y tú también estás aprendiendo.</p>
+            <p class="hero-editorial-description">Guías de alimentación, sueño y comunicación para acompañar a tu bebé. Con conocimiento, cariño y espacio para hacerlo a vuestra manera.</p>
+            <div class="editorial-actions">
+              <a class="button" href="#libros">Descubre los libros <span aria-hidden="true">↗</span></a>
+              <button class="text-button finder-trigger" type="button">Encuentra tu guía <span aria-hidden="true">→</span></button>
+            </div>
+            <a class="hero-explore" href="#universo"><span aria-hidden="true">↓</span> Pequeños momentos. Todo un mundo.</a>
           </div>
-          <div class="hero-footnote">
-            <span class="little-heart" aria-hidden="true">♡</span
-            ><span>Para tu bebé. Para ti. A vuestro ritmo.</span>
-          </div>
-        </div>
-        <div
-          class="hero-art"
-          role="img"
-          aria-label="Ilustración de una familia compartiendo la mesa con su bebé"
-        >
-          <div class="art-orbit" aria-hidden="true"></div>
-          <span class="hero-spark" aria-hidden="true">✳</span
-          ><span class="art-note note-top">Pequeños descubrimientos</span
-          ><img
-            class="family-art"
-            src="/assets/familia.webp"
-            width="900"
-            height="900"
-            fetchpriority="high"
-            alt=""
-          />
-          <div class="art-sticker">
-            <span aria-hidden="true">♡</span>Mucho por aprender.<br /><strong
-              >Mucho por compartir.</strong
-            >
-          </div>
-          <div class="art-caption">
-            <span class="status-dot" aria-hidden="true"></span> EL COMIENZO DE
-            VUESTRA HISTORIA
+          <div class="hero-visual">
+            <div class="hero-photo-shell">
+              <div id="hero-gallery" data-active="connection">
+                <img class="is-active" data-hero-scene="connection" src="/assets/editorial-conexion-v3.webp" width="1440" height="960" fetchpriority="high" alt="Un bebé sostiene los dedos de una persona adulta mientras comparten una mirada. Escena ilustrativa." aria-hidden="false" />
+                <img data-hero-scene="food" src="/assets/editorial-comida-v3.webp" width="1440" height="960" alt="Un bebé explora la comida junto a una persona adulta. Escena ilustrativa." aria-hidden="true" />
+                <img data-hero-scene="rest" src="/assets/editorial-calma-v3.webp" width="1440" height="960" alt="Una persona adulta despierta sostiene a su bebé en un momento de calma. Escena ilustrativa." aria-hidden="true" />
+              </div>
+              <span class="hero-photo-note">Lo cotidiano.<br /> <strong>Lo extraordinario.</strong></span>
+            </div>
+            <div class="hero-photo-bottom">
+              <span class="photo-series-label">VUESTRO DÍA A DÍA</span>
+              <div class="hero-scene-controls" role="group" aria-label="Explorar escenas de crianza" data-visual-control>
+                <button type="button" data-hero-target="food" aria-pressed="false">Comer</button>
+                <button type="button" data-hero-target="rest" aria-pressed="false">Descansar</button>
+                <button type="button" data-hero-target="connection" aria-pressed="true" class="is-active">Conectar</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <div class="belief-strip" aria-label="Nuestros valores">
-        <div class="wrap">
-          <span>Evidencia que orienta</span><span aria-hidden="true">✳</span
-          ><span>Herramientas para el día a día</span
-          ><span aria-hidden="true">✳</span><span>Crianza sin culpa</span
-          ><span aria-hidden="true">✳</span><span>A vuestro ritmo</span>
-        </div>
+      <div class="editorial-values wrap" aria-label="Nuestros valores">
+        <p>Conocimiento que acompaña.</p><span>Evidencia que orienta</span><span>Crianza sin culpa</span><span>A vuestro ritmo</span>
       </div>
-      <section
-        class="section wrap universe"
-        id="universo"
-        aria-labelledby="universe-title"
-      >
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">EL UNIVERSO INFANT NOOK</p>
-            <h2 id="universe-title">
-              Pequeños momentos.<br />Grandes preguntas.
-            </h2>
+      <section class="section wrap universe editorial-universe" id="universo" aria-labelledby="universe-title">
+        <div class="section-heading story-heading">
+          <div><p class="eyebrow">EL UNIVERSO INFANT NOOK</p><h2 id="universe-title">Lo importante ocurre<br /> <span>en lo cotidiano.</span></h2></div>
+          <p>Una textura nueva. Un abrazo.<br /> Una mirada que lo dice todo.<br /> Estamos en esos pequeños momentos.</p>
+        </div>
+        <div id="visual-story">
+          <div class="story-layout">
+            <div class="story-stage" data-active="food">
+              <div class="story-photo-frame">
+                <img data-scene="food" class="is-active" src="/assets/editorial-comida-v3.webp" width="1440" height="960" alt="Descubrir la comida en compañía." loading="lazy" aria-hidden="false" />
+                <img data-scene="rest" src="/assets/editorial-calma-v3.webp" width="1440" height="960" alt="Un momento de calma en brazos." loading="lazy" aria-hidden="true" />
+                <img data-scene="connection" src="/assets/editorial-conexion-v3.webp" width="1440" height="960" alt="Conectar a través de una mirada y del contacto." loading="lazy" aria-hidden="true" />
+                <span class="story-photo-brand" aria-hidden="true">infant nook.</span>
+              </div>
+              <div class="story-stage-bottom">
+                <span>CADA MOMENTO CUENTA</span>
+                <div class="story-controls" role="group" aria-label="Ir a un momento" data-visual-control>
+                  <button type="button" data-story-target="food" aria-current="step" aria-label="01 · Descubrir la comida">01</button>
+                  <button type="button" data-story-target="rest" aria-label="02 · Acompañar el descanso">02</button>
+                  <button type="button" data-story-target="connection" aria-label="03 · Conectar">03</button>
+                </div>
+              </div>
+              <div id="story-progress" role="progressbar" aria-label="Recorrido por momentos" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+            </div>
+            <div class="story-chapters">
+              <article class="story-step is-active" data-story-step="food" id="momento-comer">
+                <img class="story-mobile-image" src="/assets/editorial-comida-v3.webp" width="1440" height="960" alt="Un bebé descubre texturas en su plato, acompañado por una persona adulta." loading="lazy" />
+                <div class="story-copy"><p class="eyebrow"><span>01</span> A LA MESA</p><h3>Todo empieza<br /> con curiosidad.</h3><p>Una textura nueva. Una mano que explora. Ideas y guías para compartir la mesa, a vuestro ritmo.</p><a class="story-link" href="#libros" data-category-link="alimentacion">Explorar alimentación <span aria-hidden="true">↗</span></a></div>
+              </article>
+              <article class="story-step" data-story-step="rest" id="momento-descansar">
+                <img class="story-mobile-image" src="/assets/editorial-calma-v3.webp" width="1440" height="960" alt="Una persona adulta despierta acompaña un momento de descanso de su bebé en brazos." loading="lazy" />
+                <div class="story-copy"><p class="eyebrow"><span>02</span> A DESCANSAR</p><h3>Cuando el día<br /> baja el volumen.</h3><p>También hay preguntas al caer la noche. Un espacio para comprender el sueño y encontrar lo que encaja con vuestra familia.</p><a class="story-link" href="#libros" data-category-link="sueno">Explorar el sueño <span aria-hidden="true">↗</span></a></div>
+              </article>
+              <article class="story-step" data-story-step="connection" id="momento-conectar">
+                <img class="story-mobile-image" src="/assets/editorial-conexion-v3.webp" width="1440" height="960" alt="Un bebé y una persona adulta se miran mientras mantienen el contacto de sus manos." loading="lazy" />
+                <div class="story-copy"><p class="eyebrow"><span>03</span> A CONECTAR</p><h3>Todavía sin palabras.<br /> Ya compartiendo.</h3><p>Una mirada, un gesto, un momento juntos. Explora otras formas de acompañar la comunicación antes de las palabras.</p><a class="story-link" href="#libros" data-category-link="vinculo">Explorar Baby Sign <span aria-hidden="true">↗</span></a></div>
+              </article>
+            </div>
           </div>
-          <p>
-            La primera cucharada. Otra noche en vela.<br />Ese gesto que
-            empiezas a entender.<br />Hay un rincón para cada etapa.
-          </p>
         </div>
-        <div class="topic-grid">
-          <a
-            class="topic-card topic-food"
-            href="#libros"
-            data-category-link="alimentacion"
-            ><div class="topic-top">
-              <span class="topic-number">01 / A LA MESA</span
-              ><span class="round-arrow" aria-hidden="true">↗</span>
-            </div>
-            <img
-              src="/assets/bebe-comer.webp"
-              width="400"
-              height="400"
-              alt=""
-              loading="lazy"
-            />
-            <h3>Descubrir sabores.</h3>
-            <p>
-              BLW, recetas y organización para compartir la mesa en familia.
-            </p>
-            <span class="topic-link"
-              >Explorar alimentación <span aria-hidden="true">→</span></span
-            ></a
-          >
-          <a
-            class="topic-card topic-sleep"
-            href="#libros"
-            data-category-link="sueno"
-            ><div class="topic-top">
-              <span class="topic-number">02 / A DESCANSAR</span
-              ><span class="round-arrow" aria-hidden="true">↗</span>
-            </div>
-            <img
-              src="/assets/bebe-calma.webp"
-              width="400"
-              height="400"
-              alt=""
-              loading="lazy"
-            />
-            <h3>Acompañar las noches.</h3>
-            <p>
-              Una mirada respetuosa al sueño y a lo que necesita vuestra
-              familia.
-            </p>
-            <span class="topic-link"
-              >Explorar sueño <span aria-hidden="true">→</span></span
-            ></a
-          >
-          <a
-            class="topic-card topic-bond"
-            href="#libros"
-            data-category-link="vinculo"
-            ><div class="topic-top">
-              <span class="topic-number">03 / A CONECTAR</span
-              ><span class="round-arrow" aria-hidden="true">↗</span>
-            </div>
-            <img
-              src="/assets/bebe-abrazo.webp"
-              width="400"
-              height="400"
-              alt=""
-              loading="lazy"
-            />
-            <h3>Entenderse con gestos.</h3>
-            <p>
-              Baby Sign para explorar juntos la comunicación antes de las
-              palabras.
-            </p>
-            <span class="topic-link"
-              >Explorar vínculo <span aria-hidden="true">→</span></span
-            ></a
-          >
-        </div>
+        <p class="scene-credit">Escenas ilustrativas creadas con IA para representar momentos de crianza.</p>
       </section>
       <section
         class="books-section section"
@@ -264,12 +191,12 @@
             <div>
               <p class="eyebrow">LA ESTANTERÍA DE VUESTRA FAMILIA</p>
               <h2 id="books-title">
-                Un libro. Muchas formas<br />de acompañaros.
+                Un libro. Muchas formas<br /> de acompañaros.
               </h2>
             </div>
             <p>
-              Para leer, consultar y volver a abrir.<br />Encuentra la guía que
-              encaja<br />con vuestro momento.
+              Para leer, consultar y volver a abrir.<br /> Encuentra la guía que
+              encaja<br /> con vuestro momento.
             </p>
           </div>
           <div class="catalog-toolbar">
@@ -489,7 +416,7 @@
           <div class="planner-copy">
             <p class="eyebrow">DE LA LECTURA A VUESTRA MESA</p>
             <h2 id="planner-title">
-              Menos «¿qué preparo?».<br />Más tener un plan.
+              Menos «¿qué preparo?».<br /> Más tener un plan.
             </h2>
             <p>
               Los libros te acompañan. El planificador de Infant Nook te ayuda a
@@ -505,17 +432,10 @@
               >Vuestro rincón para organizar la semana.</span
             >
           </div>
-          <div class="planner-art">
-            <div class="planner-ring" aria-hidden="true"></div>
-            <img
-              src="/assets/bebe-comer.webp"
-              width="400"
-              height="400"
-              alt="Ilustración del personaje de Infant Nook disfrutando de la comida"
-              loading="lazy"
-            /><span class="planner-label"
-              >Un poquito de organización.<br />Un respiro para tu día.</span
-            ><span class="planner-spark" aria-hidden="true">✳</span>
+          <div class="planner-editorial-art">
+            <img class="planner-photo" src="/assets/editorial-comida-v3.webp" width="1440" height="960" alt="Una comida compartida en familia. Escena ilustrativa." loading="lazy" />
+            <div class="planner-book"><img src="/assets/batch.webp" width="334" height="500" alt="Cubierta de Batch Cooking + BLW: 101 recetas" loading="lazy" /></div>
+            <span class="planner-photo-caption">Un poquito de organización.<br /> <strong>Más espacio para compartir.</strong></span>
           </div>
         </div>
       </section>
@@ -527,7 +447,7 @@
         <div class="about-intro">
           <p class="eyebrow">NUESTRA FORMA DE ACOMPAÑAR</p>
           <h2 id="about-title">
-            La crianza no necesita<br />más ruido.<br /><span
+            La crianza no necesita<br /> más ruido.<br /> <span
               >Necesita un rincón.</span
             >
           </h2>
@@ -545,8 +465,8 @@
               loading="lazy"
             />
             <p>
-              <strong>Amelia Benet</strong><br />Voz editorial de Infant
-              Nook.<br />Guías prácticas de crianza basadas en evidencia, sin
+              <strong>Amelia Benet</strong><br /> Voz editorial de Infant
+              Nook.<br /> Guías prácticas de crianza basadas en evidencia, sin
               culpa ni promesas mágicas.
             </p>
           </div>
@@ -593,7 +513,7 @@
           <div>
             <p class="eyebrow">UN RINCÓN EN TU BANDEJA DE ENTRADA</p>
             <h2 id="newsletter-title">
-              Hay sitio para ti<br />entre los
+              Hay sitio para ti<br /> entre los
               <span class="underlined">Nookies.</span>
             </h2>
             <p>
@@ -698,7 +618,7 @@
               >Infant Nook<span class="brand-dot">.</span></span
             ></a
           >
-          <p>Conocimiento para hoy,<br />tranquilidad para mañana.</p>
+          <p>Conocimiento para hoy,<br /> tranquilidad para mañana.</p>
           <a class="back-top" href="#top"
             >Volver arriba <span aria-hidden="true">↑</span></a
           >
