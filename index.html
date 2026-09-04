@@ -43,7 +43,9 @@
     />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/editorial.css" />
+    <link rel="stylesheet" href="/discovery.css" />
     <script src="/app.js" defer></script>
+    <script src="/discovery.js" defer></script>
     <script src="/visual.js" defer></script>
     <script src="/newsletter.js" defer></script>
     <noscript
@@ -95,6 +97,7 @@
           <a href="#universo">Nuestro universo</a
           ><a href="#libros">Los libros</a
           ><a href="#planificador">Planificador</a
+          ><a class="nav-recipes" href="https://app.infantnook.com/recetas">Recetas de muestra</a
           ><a href="#nosotros">Así acompañamos</a
           ><a class="button button-small" href="#newsletter"
             >Soy de los Nookies <span aria-hidden="true">↗</span></a
@@ -139,6 +142,26 @@
       <div class="editorial-values wrap" aria-label="Nuestros valores">
         <p>Conocimiento que acompaña.</p><span>Evidencia que orienta</span><span>Crianza sin culpa</span><span>A vuestro ritmo</span>
       </div>
+      <section class="discovery-entry wrap" aria-labelledby="discovery-title">
+        <h2 id="discovery-title">¿Qué os vendría bien hoy?</h2>
+        <div class="discovery-routes">
+          <a class="discovery-route" href="https://app.infantnook.com/recetas">
+            <span class="route-number" aria-hidden="true">01</span>
+            <span><strong>Una idea para comer</strong><span>Explora nuestras recetas de muestra.</span></span>
+            <span class="route-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="discovery-route" href="https://app.infantnook.com/demo">
+            <span class="route-number" aria-hidden="true">02</span>
+            <span><strong>Organizar la semana</strong><span>Prueba el planificador, sin cuenta.</span></span>
+            <span class="route-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="discovery-route" href="#libros">
+            <span class="route-number" aria-hidden="true">03</span>
+            <span><strong>Encontrar una guía</strong><span>Un libro para vuestro momento.</span></span>
+            <span class="route-arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </section>
       <section class="section wrap universe editorial-universe" id="universo" aria-labelledby="universe-title">
         <div class="section-heading story-heading">
           <div><p class="eyebrow">EL UNIVERSO INFANT NOOK</p><h2 id="universe-title">Lo importante ocurre<br /> <span>en lo cotidiano.</span></h2></div>
@@ -412,30 +435,66 @@
         id="planificador"
         aria-labelledby="planner-title"
       >
-        <div class="planner-panel">
-          <div class="planner-copy">
+        <div class="planner-discovery">
+          <div class="planner-discovery-copy">
             <p class="eyebrow">DE LA LECTURA A VUESTRA MESA</p>
             <h2 id="planner-title">
               Menos «¿qué preparo?».<br /> Más tener un plan.
             </h2>
-            <p>
-              Los libros te acompañan. El planificador de Infant Nook te ayuda a
-              dar el siguiente paso: organizar vuestros menús BLW.
-            </p>
-            <a
-              class="button button-light"
-              href="https://app.infantnook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Abrir el planificador <span aria-hidden="true">↗</span></a
-            ><span class="planner-note"
-              >Vuestro rincón para organizar la semana.</span
-            >
+            <p>Encuentra una idea, hazle sitio en la semana y reúne sus ingredientes. El planificador conecta esos pequeños pasos.</p>
+            <p class="planner-example-invitation">Empieza con este ejemplo: una receta que pasa de la idea a la lista de compra.</p>
+            <a class="button" href="https://app.infantnook.com/demo">Probar con 8 recetas <span aria-hidden="true">↗</span></a>
+            <p class="planner-demo-note">Sin cuenta ni tarjeta. En la demo, vuestro borrador se guarda solo en este navegador.</p>
+            <a class="planner-sample-link" href="https://app.infantnook.com/recetas">Explorar las recetas de muestra <span aria-hidden="true">→</span></a>
           </div>
-          <div class="planner-editorial-art">
-            <img class="planner-photo" src="/assets/editorial-comida-v3.webp" width="1440" height="960" alt="Una comida compartida en familia. Escena ilustrativa." loading="lazy" />
-            <div class="planner-book"><img src="/assets/batch.webp" width="334" height="500" alt="Cubierta de Batch Cooking + BLW: 101 recetas" loading="lazy" /></div>
-            <span class="planner-photo-caption">Un poquito de organización.<br /> <strong>Más espacio para compartir.</strong></span>
+          <div class="planner-example" id="planner-example">
+            <p class="example-label"><span aria-hidden="true"></span> EJEMPLO INTERACTIVO</p>
+            <nav class="example-steps" aria-label="De una receta a la compra">
+              <a id="example-tab-idea" href="#example-idea" data-example-tab="idea"><span aria-hidden="true">01</span> Elige una idea</a>
+              <a id="example-tab-week" href="#example-week" data-example-tab="week"><span aria-hidden="true">02</span> Organiza tu semana</a>
+              <a id="example-tab-shopping" href="#example-shopping" data-example-tab="shopping"><span aria-hidden="true">03</span> Prepara la compra</a>
+            </nav>
+            <div class="example-panels">
+              <section class="example-panel" id="example-idea" aria-labelledby="example-idea-title" data-example-panel="idea">
+                <img class="example-dish-photo" src="/assets/planner-pan-pita.webp" width="960" height="794" alt="Pan de pita. Imagen ilustrativa del archivo de Infant Nook." loading="lazy" />
+                <div class="example-idea-caption">
+                  <div><p class="example-overline">UNA DE LAS 8 RECETAS DE LA DEMO</p><h3 id="example-idea-title">Pan de pita</h3><p>Una idea para tener a mano.</p></div>
+                  <button class="example-next" type="button" data-example-next="week" data-discovery-action>Llevar a la semana <span aria-hidden="true">→</span></button>
+                </div>
+              </section>
+              <section class="example-panel" id="example-week" aria-labelledby="example-week-title" data-example-panel="week">
+                <p class="example-overline">HAZLE SITIO A TU IDEA</p>
+                <h3 id="example-week-title">Pan de pita, el <span data-example-day-name>lunes</span>.</h3>
+                <div class="example-day-choice" data-discovery-action>
+                  <label for="example-day">¿Qué día os viene bien?</label>
+                  <select id="example-day">
+                    <option value="0">Lunes</option><option value="1">Martes</option><option value="2">Miércoles</option><option value="3">Jueves</option><option value="4">Viernes</option><option value="5">Sábado</option><option value="6">Domingo</option>
+                  </select>
+                </div>
+                <div class="example-week-strip" aria-hidden="true">
+                  <span data-example-day="0" class="is-selected">Lun<i></i></span><span data-example-day="1">Mar<i></i></span><span data-example-day="2">Mié<i></i></span><span data-example-day="3">Jue<i></i></span><span data-example-day="4">Vie<i></i></span><span data-example-day="5">Sáb<i></i></span><span data-example-day="6">Dom<i></i></span>
+                </div>
+                <div class="example-menu-slot">
+                  <img src="/assets/planner-pan-pita.webp" width="960" height="794" alt="" loading="lazy" />
+                  <div><p class="example-overline">MERIENDA · <span data-example-day-name>LUNES</span></p><strong>Pan de pita</strong><p>Ya tiene un hueco en el ejemplo.</p></div>
+                </div>
+                <button class="example-next" type="button" data-example-next="shopping" data-discovery-action>Ver sus ingredientes <span aria-hidden="true">→</span></button>
+              </section>
+              <section class="example-panel" id="example-shopping" aria-labelledby="example-shopping-title" data-example-panel="shopping">
+                <p class="example-overline">DEL MENÚ A LA COMPRA</p>
+                <h3 id="example-shopping-title">Revisa lo que ya tenéis.</h3>
+                <p class="example-shopping-origin">Pan de pita · <span data-example-day-name>lunes</span>, merienda.<br />Sus cuatro ingredientes, con las cantidades de la receta.</p>
+                <ul class="example-shopping-list">
+                  <li><label><input type="checkbox" /><span><strong>1 cucharada de aceite de oliva</strong><span>Ya lo tengo</span></span></label></li>
+                  <li><label><input type="checkbox" /><span><strong>1 vaso de yogur natural o de soja</strong><span>Ya lo tengo</span></span></label></li>
+                  <li><label><input type="checkbox" /><span><strong>2 vasos de harina integral</strong><span>Ya lo tengo</span></span></label></li>
+                  <li><label><input type="checkbox" /><span><strong>1 cucharadita de levadura química</strong><span>Ya lo tengo</span></span></label></li>
+                </ul>
+                <p class="example-shopping-count" role="status" data-discovery-action>4 ingredientes por revisar.</p>
+              </section>
+            </div>
+            <p class="example-footnote">Una muestra para explorar la organización del menú. Estos cambios se quedan en el ejemplo; abre la demo para preparar vuestra semana.</p>
+            <p class="discovery-sr-only" role="status" id="planner-example-status"></p>
           </div>
         </div>
       </section>
